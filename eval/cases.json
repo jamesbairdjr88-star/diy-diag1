@@ -1,0 +1,219 @@
+[
+  {
+    "label": "tcc_shudder",
+    "intake": {
+      "vehicle": {},
+      "concern": "Truck shudders like rumble strips at 45 mph cruising, only when warm",
+      "engine_temp": "warm",
+      "speed_range": "40-50 mph",
+      "driving_condition": [
+        "cruising",
+        "light throttle"
+      ],
+      "warning_lights": [],
+      "codes": []
+    }
+  },
+  {
+    "label": "misfire",
+    "intake": {
+      "vehicle": {},
+      "concern": "Engine shakes and stumbles at idle, check engine light is flashing",
+      "engine_temp": "both",
+      "speed_range": "",
+      "driving_condition": [
+        "idle"
+      ],
+      "warning_lights": [
+        "flashing check engine"
+      ],
+      "codes": [
+        "P0302"
+      ]
+    }
+  },
+  {
+    "label": "misfire",
+    "intake": {
+      "vehicle": {},
+      "concern": "Rough idle and hesitation when accelerating",
+      "engine_temp": "cold",
+      "speed_range": "",
+      "driving_condition": [
+        "accelerating"
+      ],
+      "warning_lights": [
+        "check engine"
+      ],
+      "codes": [
+        "P0304"
+      ]
+    }
+  },
+  {
+    "label": "driveline",
+    "intake": {
+      "vehicle": {},
+      "concern": "Steering wheel shakes on the highway around 65",
+      "engine_temp": "both",
+      "speed_range": "60-70 mph",
+      "driving_condition": [
+        "highway"
+      ],
+      "warning_lights": [],
+      "codes": []
+    }
+  },
+  {
+    "label": "brakes_worn",
+    "intake": {
+      "vehicle": {},
+      "concern": "Grinding noise when I press the brakes",
+      "engine_temp": "both",
+      "speed_range": "",
+      "driving_condition": [
+        "braking"
+      ],
+      "warning_lights": [],
+      "codes": []
+    }
+  },
+  {
+    "label": "brakes_worn",
+    "intake": {
+      "vehicle": {},
+      "concern": "Squeal from front wheels when stopping",
+      "engine_temp": "both",
+      "speed_range": "",
+      "driving_condition": [
+        "braking"
+      ],
+      "warning_lights": [],
+      "codes": []
+    }
+  },
+  {
+    "label": "no_start_battery",
+    "intake": {
+      "vehicle": {},
+      "concern": "Car won't start, just clicks, cold morning",
+      "engine_temp": "cold",
+      "speed_range": "",
+      "driving_condition": [],
+      "warning_lights": [],
+      "codes": []
+    }
+  },
+  {
+    "label": "charging",
+    "intake": {
+      "vehicle": {},
+      "concern": "Battery light came on and headlights dim while driving",
+      "engine_temp": "warm",
+      "speed_range": "",
+      "driving_condition": [
+        "cruising"
+      ],
+      "warning_lights": [
+        "battery"
+      ],
+      "codes": []
+    }
+  },
+  {
+    "label": "overheat",
+    "intake": {
+      "vehicle": {},
+      "concern": "Temp gauge climbs to hot sitting in traffic, sweet smell",
+      "engine_temp": "warm",
+      "speed_range": "",
+      "driving_condition": [
+        "idle"
+      ],
+      "warning_lights": [
+        "temp"
+      ],
+      "codes": []
+    }
+  },
+  {
+    "label": "evap",
+    "intake": {
+      "vehicle": {},
+      "concern": "Check engine light on after getting gas",
+      "engine_temp": "both",
+      "speed_range": "",
+      "driving_condition": [],
+      "warning_lights": [
+        "check engine"
+      ],
+      "codes": [
+        "P0456"
+      ]
+    }
+  },
+  {
+    "label": "o2_cat",
+    "intake": {
+      "vehicle": {},
+      "concern": "Rotten egg smell and bad fuel economy",
+      "engine_temp": "warm",
+      "speed_range": "",
+      "driving_condition": [
+        "accelerating"
+      ],
+      "warning_lights": [
+        "check engine"
+      ],
+      "codes": [
+        "P0420"
+      ]
+    }
+  },
+  {
+    "label": "trans_slip",
+    "intake": {
+      "vehicle": {},
+      "concern": "RPM jumps but car doesn't speed up, transmission slipping",
+      "engine_temp": "warm",
+      "speed_range": "",
+      "driving_condition": [
+        "accelerating"
+      ],
+      "warning_lights": [
+        "check engine"
+      ],
+      "codes": [
+        "P0700"
+      ]
+    }
+  },
+  {
+    "label": "steering_susp",
+    "intake": {
+      "vehicle": {},
+      "concern": "Clunk from the front end going over bumps, steering feels loose",
+      "engine_temp": "both",
+      "speed_range": "",
+      "driving_condition": [
+        "turning"
+      ],
+      "warning_lights": [],
+      "codes": []
+    }
+  },
+  {
+    "label": "ac",
+    "intake": {
+      "vehicle": {},
+      "concern": "A/C blowing warm air",
+      "engine_temp": "warm",
+      "speed_range": "",
+      "driving_condition": [
+        "idle"
+      ],
+      "warning_lights": [],
+      "codes": []
+    }
+  }
+]

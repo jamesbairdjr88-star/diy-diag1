@@ -1,0 +1,56 @@
+{
+  "structured_concern": "Owner reports: Truck shakes when I'm cruising around 45, feels like driving over rumble strips. Occurs at 40-50 mph; while cruising, light throttle; engine warm. Frequency: sometimes. Started: about 2 weeks ago, gradual.",
+  "safety_flags": [],
+  "stop_driving": false,
+  "likely_causes": [
+    {
+      "id": "tcc_shudder",
+      "name": "Torque converter clutch shudder",
+      "system": "Transmission",
+      "confidence": 0.81,
+      "why": "Shudder that only shows up warm at a steady, light-throttle cruise is the classic converter-clutch pattern.",
+      "diy_checks": [
+        "Check transmission fluid level and condition if your vehicle has a dipstick (red/pink and not burnt-smelling is good).",
+        "Note the exact speed it happens. If a light tap of the brake (without slowing) or a slight throttle change makes it stop instantly, that points to the converter clutch.",
+        "Scan for codes, including pending codes."
+      ],
+      "difficulty": 3,
+      "difficulty_label": "Advanced - special tools or lifting the vehicle",
+      "pro_when": "Fluid service or software updates often need a shop scan tool. Internal converter problems are a shop job."
+    },
+    {
+      "id": "misfire",
+      "name": "Engine misfire (plugs, coils, or injector)",
+      "system": "Engine",
+      "confidence": 0.1,
+      "why": "Shaking with stumbling or a check engine light most often comes from ignition parts.",
+      "diy_checks": [
+        "Scan for codes. P0301-P0308 tell you which cylinder.",
+        "If one cylinder is misfiring and your engine has coil-on-plug, swap that coil with a neighbor. If the misfire follows the coil, replace the coil.",
+        "Pull and inspect the spark plug in that cylinder. Look for oil, cracks, or a worn electrode."
+      ],
+      "difficulty": 2,
+      "difficulty_label": "Moderate - some mechanical experience",
+      "pro_when": "If the check engine light is flashing, stop driving: unburned fuel can overheat and ruin the catalytic converter."
+    },
+    {
+      "id": "driveline",
+      "name": "Driveline, tire, or wheel balance vibration",
+      "system": "Tires/Driveline",
+      "confidence": 0.1,
+      "why": "Vibration that follows road speed rather than engine load usually comes from the tires, wheels, or driveshaft.",
+      "diy_checks": [
+        "Look for uneven tire wear, bulges, or missing wheel weights.",
+        "Check whether the vibration depends on speed (same at any throttle) or on load. Speed-only usually means tires, balance, or the driveshaft.",
+        "With the vehicle safely on jack stands, check u-joints for play by twisting the driveshaft by hand."
+      ],
+      "difficulty": 2,
+      "difficulty_label": "Moderate - some mechanical experience",
+      "pro_when": "Tire balancing needs a shop machine. Any play in the u-joints or a wobbling tire should be fixed before highway driving."
+    }
+  ],
+  "needs_more_info": [
+    "Can you read the codes? Many parts stores scan for free, or a basic OBD2 reader costs about $20-30."
+  ],
+  "engine": "rules-v0.1"
+}

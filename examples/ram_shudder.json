@@ -1,0 +1,22 @@
+{
+  "vehicle": {
+    "vin": "",
+    "year": 2018,
+    "make": "Ram",
+    "model": "1500",
+    "engine": "5.7L V8 Hemi",
+    "transmission": "8-speed automatic",
+    "mileage": 96000
+  },
+  "concern": "Truck shakes when I'm cruising around 45, feels like driving over rumble strips",
+  "onset": "about 2 weeks ago, gradual",
+  "frequency": "sometimes",
+  "engine_temp": "warm",
+  "speed_range": "40-50 mph",
+  "driving_condition": [
+    "cruising",
+    "light throttle"
+  ],
+  "warning_lights": [],
+  "codes": []
+}
