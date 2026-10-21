@@ -1,0 +1,12 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "DIYDIAG_API_KEY",
+      "description": "Optional. OpenAI-compatible API key for the LLM wording/ranking pass in diydiag/llm.py. Without it the app uses the offline rule engine, which is its default and what the eval harness measures. Obtain from your provider, e.g. https://platform.openai.com/api-keys",
+      "requiredAtBoot": false
+    }
+  ]
+}

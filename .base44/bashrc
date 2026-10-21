@@ -1,0 +1,23 @@
+# Startup file for the interactive shell shown in the Base44 preview.
+# Sandbox only - this is not part of the DIY Diag application.
+
+cat <<'BANNER'
+=============================================================================
+ DIY Diag 0.1 - AI-assisted vehicle intake and draft diagnostic reports
+=============================================================================
+ No API key needed: the offline rule engine runs right here.
+
+   python -m diydiag                  guided intake, then a Markdown report
+   python -m diydiag --intake examples/ram_shudder.json --html --json \
+                     --out /tmp/ram   sample intake -> report.md/.html/.json
+   python eval/run_eval.py            14 labeled cases (top-1 / top-3 accuracy)
+   python -m pytest -q                7 tests
+
+ Sample intake and generated reports are in examples/.
+ Write your own reports under /tmp to keep the repo clean.
+ Optional AI wording pass (OpenAI-compatible): export DIYDIAG_API_KEY=...
+=============================================================================
+BANNER
+
+export PS1='diydiag \w $ '
+cd /app 2>/dev/null || true

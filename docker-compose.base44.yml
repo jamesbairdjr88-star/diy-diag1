@@ -1,0 +1,58 @@
+# Base44 sandbox environment for DIY Diag.
+#
+# DIY Diag is a standard-library-only Python CLI: it has no HTTP server, so the
+# preview runs the *real* CLI (guided intake, reports, eval harness, tests) inside
+# a browser terminal served on host port 3000. Nothing about the app is stubbed
+# or reimplemented - the terminal just gives the CLI a reachable port.
+#
+# Source is bind-mounted, so edits and new report files show up without a rebuild.
+services:
+  diydiag:
+    build:
+      context: .base44/docker
+      dockerfile: app.Dockerfile
+    working_dir: /app
+    init: true
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:7681"
+    environment:
+      # Passed through from the sandbox; empty when the app runs normally.
+      - BASE44_PREVIEW_MODE
+      - PYTHONUNBUFFERED=1
+    env_file:
+      # Optional credentials (DIYDIAG_API_KEY for the LLM pass). Listed last and
+      # marked optional so the app boots before any value exists.
+      - path: /run/base44/app.env
+        required: false
+    # ttyd serves the terminal; -W enables keyboard input in the browser.
+    # Everything after "--" is the shell command (without it ttyd parses the
+    # shell's own -i/prompt flags and crashes).
+    command:
+      - ttyd
+      - -W
+      - -i
+      - 0.0.0.0
+      - -p
+      - "7681"
+      - -t
+      - fontSize=15
+      - -t
+      - 'theme={"background":"#0f1117","foreground":"#e6edf3","cursor":"#7ee787","selectionBackground":"#264f78"}'
+      - --
+      - bash
+      - --rcfile
+      - /app/.base44/bashrc
+      - -i
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "-o", "/dev/null", "http://127.0.0.1:7681/"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: on-failure
+    labels:
+      base44.project: DIY Diag
+      base44.kind: web
+      base44.port: "3000"
